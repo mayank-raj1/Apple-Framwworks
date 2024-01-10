@@ -69,6 +69,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		E58A33482B4EF5B9006B650B /* Screenshot */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screenshot;
+			sourceTree = "<group>";
+		};
 		E58FF5AD2B49B6D80072FEE5 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +95,7 @@
 		E58FF5B82B49B6D80072FEE5 /* Apple-Framwworks */ = {
 			isa = PBXGroup;
 			children = (
+				E58A33482B4EF5B9006B650B /* Screenshot */,
 				E54C7B5D2B4D5902000A3C3E /* Views */,
 				E58FF5EC2B4C89C30072FEE5 /* Models */,
 				E58FF5E92B4C89500072FEE5 /* Screen */,
