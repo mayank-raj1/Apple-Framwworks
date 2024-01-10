@@ -28,19 +28,8 @@ struct Framework_detailView: View {
             Button {
                 print("yay")
             } label: {
-                AFButton(name: "Learn More", backGround: Color.red)
-            }
+                Label("Learn More", systemImage: "book.fill")
+            }.buttonStyle(.borderedProminent).tint(.red)
         }
-    }
-}
-
-
-
-struct AFButton: View {
-    var name: String
-    var backGround: Color
-    var body: some View {
-        Text(name).fontWeight(.semibold).font(.title2).frame(width: 280, height: 50)
-            .background(backGround).foregroundColor(.white).cornerRadius(10)
     }
 }

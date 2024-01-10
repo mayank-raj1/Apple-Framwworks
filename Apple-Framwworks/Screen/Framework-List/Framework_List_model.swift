@@ -5,4 +5,14 @@
 //  Created by Mayank Raj on 2024-01-09.
 //
 
-import Foundation
+import SwiftUI
+
+final class FrameworkListViewModel: ObservableObject{
+    
+    var selectedFramework: Framework?{
+        didSet{
+            isShowingDetailView = true
+        }
+    }
+    @Published var isShowingDetailView = false
+}

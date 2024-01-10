@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct Framework_List: View {
+    @StateObject var viewModel = FrameworkListViewModel()
+    
+    var frameworks: [Framework]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+            List{
+                ForEach(frameworks, id: \.self) { framework in
+                    NavigationLink( destination: Framework_detailView(framework: framework, isShowingDetailView: $viewModel.isShowingDetailView)){
+                        Framework_List_Cell(framework: framework)
+                    }
+                }
+            }
+        
     }
 }
 
 #Preview {
-    Framework_List()
+    Framework_List(frameworks: MocData.frameworks)
 }

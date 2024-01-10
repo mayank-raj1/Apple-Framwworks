@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct Framework_List_Cell: View {
+    var framework: Framework
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            Image(framework.imageName).resizable().aspectRatio(contentMode: .fit).frame(width: 60, height: 60)
+            Text(framework.name).font(.title2).fontWeight(.semibold).scaledToFit().minimumScaleFactor(0.6)
+            Spacer()
+        }
     }
 }
 
 #Preview {
-    Framework_List_Cell()
+    Framework_List_Cell(framework: MocData.sameplFramework)
 }
